@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Testando JavaScript</title>
+        <style>
+            div{
+                display: flex;
+                flex-direction: column;}
+
+                .aprovado {
+                    color: green;
+                    margin: 5px;
+                    border: none;
+                }
+
+                .reprovado {
+                    color: red;
+                    margin: 5px;
+                    border: none;
+                }
+        </style>
+    </head>
+    <body>
+        <h1>Controle de notas</h1>
+        <div>
+            Nome:
+            <input type="text" id="nome" value="">
+        </div>
+        <div>
+            Nota1:
+            <input type="text" id="nota1">
+        </div>
+        <div>
+            Nota2:
+            <input type="text" id="nota2">
+        </div>
+        <div>
+            Media:
+            <input type="text" id="media" disabled>
+        <!-- disabled - desabilita a inserção de dados dentro do campo. -->
+        </div>
+
+        <div>
+        Situação:
+        <input type="text" id="situacao" disabled>
+        </div>
+
+        <input type="button" value="calcular" id="calcular">
+
+        <script src="script2.js"></script>
+    </body>
+</html>
