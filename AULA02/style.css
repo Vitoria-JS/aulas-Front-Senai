@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header{
+    display: flex; /*vetor - colunas ou linhas (flex origami)*/
+    width: 100vw; /*viewport*/
+    height: 8vh;
+    background-color: #0336FF;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 80vw;
+    height: 60vh;
+    flex-direction: column;
+    display: flex;
+    background-color: #CEE8CD;
+    justify-content: space-around;
+    margin: 5vh auto;
+    padding: 5vw;
+    box-sizing: border-box;
+}
+
+main label{
+    color: #1A241B;
+}
+
+main input{
+    border: none;
+    border-bottom: 1px solid;
+    background-color: #CEE8CD;
+    outline: none;
+    font-size:  4vh;
+}
+
+main button{
+    font-size: 4vw;
+    padding: 1.2vh;
+}
+
+footer{
+    width: 80vw;
+    height: 15vh;
+    background-color: #CEE8CD;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 2vh;
+}
