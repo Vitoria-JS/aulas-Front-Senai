@@ -1,0 +1,22 @@
+.spinner{
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    border-radius: 50%;
+}
+
+.gold{
+    border: 5px solid lightgoldenrodyellow;
+    border-top-color: gold;
+}
+
+.red{
+    border: 5px solid lightsalmon;
+    border-top-color:red;
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}
