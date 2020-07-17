@@ -1,0 +1,63 @@
+<html>
+   <head> 
+      <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./style.css">
+      <script defer src="./cadastro.js" type="module"></script>
+     <!-- type="module" -->
+   </head>
+   <body>
+      <div class=cadastro-form>
+         <div class="titulo">
+            Escola técnica Nova Geração
+         </div>
+
+         <div class="subtitulo">
+            <div>Alunos</div>
+            <button class="botao" id="novo">Novo Aluno</button>
+         </div>
+
+         <div class="conteiner-tabela">
+            <table class="tabela">
+               <!-- thead - cabeçalho de uma tabela, th- deixa os campos em negrito, tbody - corpo de uma tabela -->
+               <thead class="campos">
+                  <tr>
+                     <th>Código</th>
+                     <th>Aluno</th>
+                     <th>Email</th>
+                     <th>Celular</th>
+                     <th>Cidade</th>
+                     <th>Ações</th>
+                  </tr>
+               </thead>
+               <tbody class="registros" id="registros">
+               
+               </tbody>
+            </table>
+         </div>
+
+      </div>
+      <div class="conteiner-modal">
+         <div class="modal">
+            <div class="titulo">
+               Cadastro novo aluno
+            </div>
+            <form id="form">
+               <input type="text" id="nome" data-type="texto" placeholder="Primeiro Nome"/>
+               <input type="text" id="email" placeholder="Endereço de email"/>
+               <input type="text" id="celular" data-type="celular" placeholder="Celular"/>
+               <input type="text" id="endereco" placeholder="Endereço"/>
+               <input type="text" id="numero" data-type="numero" placeholder="Numero"/>
+               <input type="text" id="bairro" data-type="texto" placeholder="Bairro"/>
+               <input type="text" id="cidade" data-type="texto" placeholder="Cidade"/>
+               <input type="text" id="estado" data-type="texto" placeholder="Estado"/>
+               <input type="text" id="cep" data-type="cep" placeholder="CEP"/>
+            </form>
+            <div class="acao">
+               <button class="botao" id="salvar">Salvar</button>
+               <button class="botao" id="fechar">Fechar</button>
+            </div>
+         </div>   
+      </div> 
+   </body>
+</html>
