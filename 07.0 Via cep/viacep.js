@@ -1,9 +1,16 @@
 "use stritc";
-const cep = document.getElementById('cep');
+const verificaCep = () => document.getElementById('cep').reportValidity();
 
-const encontrarCep =  (cep) => {
+
+const encontrarCep = async (cep) => {
+
+    if(verificaCep()){
     const url = `https://viacep.com.br/ws/${cep}/json/`;
-    fetch (url).then (res => res.json()).then (dados => preencherFormulario (dados));
+
+    const getAddress = await fetch (url);
+    const address = await getAddress.json();
+    preencherFormulario(address);
+    }
 }
 
 const preencherFormulario = (endereco) => {
@@ -13,4 +20,14 @@ const preencherFormulario = (endereco) => {
     document.getElementById('estado').value = endereco.uf;
 }
 
-cep.addEventListener("blur", evento => encontrarCep(cep.value));
+const maskCep = ($el) => {
+    let aux = $el.value;
+    aux = aux.replace ( /[^0-9]/g, '' );
+    aux = aux.replace ( /(.{5})(.)/, '$1-$2' );
+    $el.value = aux;
+}
+
+// "blur" - quando sair da caixinha de texto
+document.getElementById('cep').addEventListener('blur', (evento) => encontrarCep(cep.value));
+
+document.getElementById('cep').addEventListener('keyup', (evento) => maskCep(evento.target));
