@@ -39,18 +39,6 @@ const showCountries = (Countries) => {
     $info.appendChild ($container);
 };
 
-// const getCoronaMundo = async () => {
-//     const url = 'https://api.covid19api.com/Countries';
-//     const getApi = await fetch (url);
-//     const json = await getApi.json();
-//     const mundo = await {
-//                             "paises": "Mundo",
-//                             "casos": json.Countries.TotalConfirmed,
-//                             "mortes": json.Countries.TotalDeaths
-//     }
-//     showCountries (mundo);
-// }
-
 const getCoronaCountry = async () => {
     const url = 'https://corona.lmao.ninja/countries?sort=country';
     const getApi = await fetch (url);
@@ -61,10 +49,11 @@ const getCoronaCountry = async () => {
 const findCountry = ( evento ) => {
     let countryMap = evento.target.id;
     const getCountry = BD.find(country => country.countryInfo.iso2 == countryMap? country:"");
+    // console.log(getCountry);
     const country = {
         "paises": getCountry.country,
         "casos": getCountry.cases,
-        "deaths": getCountry.deaths
+        // "deaths": getCountry.deaths
     };
     showCountries (country);
 }
